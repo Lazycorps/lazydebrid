@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "LazyDebrid",
+  "version": "1.0",
+  "description": "Télécharge des torrents via AllDebrid et les transfère sur un NAS Synology",
+  "permissions": [
+    "scripting",
+    "contextMenus",
+    "notifications",
+    "storage",
+    "tabs",
+    "downloads",
+    "downloads.open",
+    "clipboardRead"
+  ],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
